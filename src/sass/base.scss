@@ -1,0 +1,157 @@
+@import "./normalize.scss";
+@import "./theme.scss";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $color-yellow;
+  min-width: 360px;
+}
+
+::selection {
+  background-color: $color-red;
+  color: #fff;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  text-align: center;
+}
+
+.App-header {
+  background-color: $color-primary;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-intro {
+  font-size: large;
+  background-color: $color-primary;
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.loading-indicator {
+  font-size: 20px;
+  text-align: center;
+  color: $color-primary;
+}
+
+.is-hidden {
+  visibility: hidden;
+}
+
+.is-visible {
+  visibility: visible;
+}
+
+// TODOS
+.todos-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: block;
+  text-align: left;
+  line-height: 2em;
+}
+
+.todo-item-completed .todo-item-title {
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.todo-item-remove {
+  color: $color-red;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  visibility: hidden;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.todo-item-title {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 20px;
+  color: $color-primary;
+  font-weight: bold;
+}
+
+.todo-item-title:hover {
+  cursor: default;
+}
+
+.todo-item:hover .todo-item-remove {
+  visibility: visible;
+}
+
+.todo-item-checkbox {
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+
+.todo-item-checkbox input[type='checkbox']:checked {
+ color: $color-red;
+}
+
+.add-todo {
+  position: relative;
+}
+
+.add-todo form {
+  height: 50px;
+}
+
+.add-todo:after {
+  clear: both;
+  content: '.';
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+
+.add-todo-input {
+  font-size: 20px;
+  display: block;
+  float: left;
+  width: 80%;
+  height: 50px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  padding: 8px;
+  line-height: 0;
+  color: $color-secondary;
+}
+.add-todo-input:focus,
+.add-todo-button:focus {
+  border: $color-green-light solid 5px;
+  outline: none
+}
+
+.add-todo-button {
+  display: block; 
+  width: 20%;
+  height: 50px;
+  box-sizing: border-box;
+  line-height: 0;
+  padding: 0;
+  border: none;
+  float: right;
+  background-color: $color-secondary;
+  color: #fff;
+}
+
